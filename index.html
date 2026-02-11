@@ -107,17 +107,86 @@
             color: #00f5a0;
             text-decoration: none;
         }
+
+        .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    background: linear-gradient(90deg, #ff0000, #ff4d4d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-text p {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #cccccc;
+    max-width: 500px;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(255, 0, 0, 0.5);
+    transition: transform 0.4s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text p {
+        margin: 20px auto;
+    }
+}
     </style>
 </head>
 <body>
 
     <!-- HERO SECTION -->
-    <section class="hero scroll-reveal">
-        <h1>Samridha Banerjee</h1>
-        <p>
-            Full-Stack Vibe Coder. Currently pursuing B.Tech in IT at MSIT, Kolkata.
-        </p>
-    </section>
+<section class="hero scroll-reveal">
+    <div class="hero-container">
+        <div class="hero-text">
+            <h1>Samridha Banerjee</h1>
+            <p>
+                Full-Stack Vibe Coder. Currently pursuing B.Tech in IT at MSIT, Kolkata.
+            </p>
+        </div>
+
+        <div class="hero-image">
+            <img src="hero.jpg" alt="Samridha Banerjee Portrait">
+        </div>
+    </div>
+</section>
 
     <!-- ACHIEVEMENTS SECTION -->
     <section id="achievements">
@@ -157,7 +226,7 @@
     <!-- CONTACT -->
     <section class="scroll-reveal">
         <h2>Contact</h2>
-        <p>Email: <a href="mailto:samridha@example.com">samridha@example.com</a></p>
+        <p>Email: <a href="mailto:banerjeesamridha7@gmail.com">banerjeesamridha7@gmail.com</a></p>
     </section>
 
     <footer>
