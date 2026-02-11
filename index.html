@@ -114,6 +114,10 @@
     align-items: center;
 }
 
+.hero {
+    padding-top: 120px;
+}
+        
 .hero-container {
     display: flex;
     align-items: center;
@@ -269,9 +273,71 @@
     font-size: 1rem;
     color: #ff4d4d;
 }
+
+/* ===== HEADER ===== */
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 20px 10%;
+    z-index: 1000;
+    border-bottom: 1px solid #222;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ff0000, #ff4d4d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #cccccc;
+    transition: 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.nav-links a:hover {
+    color: #ff4d4d;
+}
     </style>
 </head>
 <body>
+
+    <!-- HEADER -->
+<header>
+    <div class="container">
+        <nav>
+            <div class="logo">SB</div>
+
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
     <!-- HERO SECTION -->
 <section class="hero scroll-reveal">
