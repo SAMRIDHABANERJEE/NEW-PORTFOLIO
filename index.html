@@ -1,298 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Samridha Banerjee | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Samridha Banerjee | Full Stack Developer & AI Builder</title>
+    <meta name="description" content="Samridha Banerjee - Full-Stack Vibe Coder from Kolkata. B.Tech IT student at MSIT building intelligent applications.">
+    <meta name="keywords" content="Samridha Banerjee, Full Stack Developer Kolkata, MSIT, AI Developer">
+    <meta name="author" content="Samridha Banerjee">
 
-<meta name="description" content="Samridha Banerjee - Full Stack Developer & AI Builder from Kolkata. B.Tech IT student at MSIT building intelligent web applications.">
-<meta name="keywords" content="Samridha Banerjee, Full Stack Developer Kolkata, AI Developer, MSIT, Web Developer India">
-<meta name="author" content="Samridha Banerjee">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
+        html {
+            scroll-behavior: smooth;
+        }
 
-:root{
---bg-dark:#0a0a0f;
---bg-card:#151520;
---text-primary:#fff;
---text-secondary:#a0a0b8;
---accent-cyan:#00d9ff;
---accent-purple:#b24bf3;
---gradient-1:linear-gradient(135deg,#00d9ff,#b24bf3);
-}
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+            color: white;
+            line-height: 1.6;
+        }
 
-body{
-font-family:'JetBrains Mono',monospace;
-background:var(--bg-dark);
-color:var(--text-primary);
-line-height:1.6;
-overflow-x:hidden;
-}
+        h1, h2 {
+            font-family: 'Syne', sans-serif;
+        }
 
-.container{max-width:1300px;margin:auto;padding:0 2rem;}
+        section {
+            padding: 80px 10%;
+        }
 
-header{
-position:sticky;top:0;
-background:rgba(10,10,15,.85);
-backdrop-filter:blur(10px);
-border-bottom:1px solid rgba(255,255,255,.05);
-padding:1.5rem 0;
-z-index:100;
-}
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
 
-nav{display:flex;justify-content:space-between;align-items:center;}
-.logo{
-font-family:'Syne',sans-serif;
-font-weight:800;
-font-size:1.5rem;
-background:var(--gradient-1);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
+        .hero h1 {
+            font-size: 3rem;
+            background: linear-gradient(90deg, #00f5a0, #00d9f5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-nav ul{display:flex;gap:2rem;list-style:none;}
-nav a{text-decoration:none;color:var(--text-secondary);transition:.3s;}
-nav a:hover{color:#fff;}
+        .hero p {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #cccccc;
+            max-width: 700px;
+        }
 
-.hero{
-min-height:90vh;
-display:flex;
-align-items:center;
-padding:4rem 0;
-}
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
 
-.hero-content{
-display:grid;
-grid-template-columns:1.2fr 1fr;
-gap:4rem;
-align-items:center;
-}
+        .card {
+            background: #1f1f1f;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            transition: 0.3s ease;
+        }
 
-.hero h1{
-font-family:'Syne',sans-serif;
-font-size:3.5rem;
-margin-bottom:1.5rem;
-}
+        .card:hover {
+            transform: translateY(-5px);
+            background: #262626;
+        }
 
-.gradient-text{
-background:var(--gradient-1);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
+        ul {
+            padding-left: 20px;
+        }
 
-.hero p{
-color:var(--text-secondary);
-margin-bottom:2rem;
-}
+        li {
+            margin-bottom: 10px;
+        }
 
-.btn{
-padding:1rem 2rem;
-border-radius:8px;
-text-decoration:none;
-font-weight:500;
-transition:.3s;
-display:inline-block;
-}
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.6s ease;
+        }
 
-.btn-primary{
-background:var(--gradient-1);
-color:#fff;
-}
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-.btn-secondary{
-border:1px solid rgba(255,255,255,.2);
-color:#fff;
-}
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: #111;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
 
-.btn-secondary:hover{
-background:rgba(0,217,255,.1);
-}
-
-section{padding:6rem 0;}
-
-.section-title{
-font-family:'Syne',sans-serif;
-font-size:2.5rem;
-text-align:center;
-margin-bottom:3rem;
-}
-
-.skills-grid, .projects-grid{
-display:grid;
-gap:1.5rem;
-}
-
-.skills-grid{
-grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
-}
-
-.skill-tag{
-background:var(--bg-card);
-padding:1rem;
-border-radius:8px;
-text-align:center;
-border:1px solid rgba(255,255,255,.05);
-transition:.3s;
-}
-
-.skill-tag:hover{
-border-color:var(--accent-cyan);
-}
-
-.projects-grid{
-grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
-}
-
-.project-card{
-background:var(--bg-card);
-padding:2rem;
-border-radius:12px;
-border:1px solid rgba(255,255,255,.05);
-transition:.3s;
-}
-
-.project-card:hover{
-transform:translateY(-5px);
-border-color:var(--accent-cyan);
-}
-
-.project-title{
-font-family:'Syne',sans-serif;
-font-size:1.3rem;
-margin-bottom:1rem;
-}
-
-footer{
-padding:3rem 0;
-text-align:center;
-border-top:1px solid rgba(255,255,255,.05);
-color:var(--text-secondary);
-}
-
-.scroll-reveal{
-opacity:0;
-transform:translateY(30px);
-transition:all .6s ease;
-}
-
-.scroll-reveal.active{
-opacity:1;
-transform:translateY(0);
-}
-
-@media(max-width:900px){
-.hero-content{grid-template-columns:1fr;}
-.hero h1{font-size:2.5rem;}
-}
-</style>
+        a {
+            color: #00f5a0;
+            text-decoration: none;
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
-<div class="container">
-<nav>
-<div class="logo">SB</div>
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</nav>
-</div>
-</header>
+    <!-- HERO SECTION -->
+    <section class="hero scroll-reveal">
+        <h1>Samridha Banerjee</h1>
+        <p>
+            Full-Stack Vibe Coder. Currently pursuing B.Tech in IT at MSIT, Kolkata.
+        </p>
+    </section>
 
-<section class="hero" id="about">
-<div class="container hero-content">
-<div>
-<h1>Hi, I'm <span class="gradient-text">Samridha Banerjee</span></h1>
-<p>Full-Stack Developer & AI Builder crafting intelligent, scalable web applications. Currently pursuing B.Tech in IT at MSIT, Kolkata.</p>
-<a href="#projects" class="btn btn-primary">View Projects</a>
-<a href="#contact" class="btn btn-secondary">Contact Me</a>
-</div>
-<div>
-<img src="profile.jpg" alt="Samridha Banerjee" style="width:100%;border-radius:20px;">
-</div>
-</div>
-</section>
+    <!-- ACHIEVEMENTS SECTION -->
+    <section id="achievements">
+        <h2 class="scroll-reveal">Achievements & Activities in 2025</h2>
 
-<section id="skills">
-<div class="container">
-<h2 class="section-title scroll-reveal">Technical <span class="gradient-text">Arsenal</span></h2>
-<div class="skills-grid">
-<div class="skill-tag scroll-reveal">Python</div>
-<div class="skill-tag scroll-reveal">JavaScript</div>
-<div class="skill-tag scroll-reveal">TypeScript</div>
-<div class="skill-tag scroll-reveal">React</div>
-<div class="skill-tag scroll-reveal">Node.js</div>
-<div class="skill-tag scroll-reveal">SQL</div>
-<div class="skill-tag scroll-reveal">AI/ML</div>
-<div class="skill-tag scroll-reveal">FastAPI</div>
-</div>
-</div>
-</section>
+        <div class="card scroll-reveal">
+            <ul>
+                <li>Class Representative of INFORMATION TECHNOLOGY since 1st Year (September 2024).</li>
+                <li>Team SCIENCE EXPLORIUM secured 3rd Position in Prototype Making Competition at National Science Day 2025 (MSIT).</li>
+                <li>B.Tech 1st Year Stream Topper (Batch 2024–28), MSIT.</li>
+                <li>Legend Tier Achiever in Google Cloud Arcade Cohort-1 (April–June 2025).</li>
+                <li>Medal of Appreciation in Online Global Photography Contest 2025 (Top 200 globally).</li>
+                <li>Team Lead & Founder of SIH Hackathon Team – TOURISM TINKERS.</li>
+                <li>Team RANGOLI TINKERS secured 3rd Position at Rangreza 2025 (Arteza Club, MSIT).</li>
+                <li>Member of Major Technical Clubs in MSIT.</li>
+                <li>Part of POC Team for YAA Anime Fest 2025 at Nazrul Tirtha.</li>
+                <li>Selected among Top 40 Teams (from 70+) for Offline Handicrafts Exhibition (Greenovation Club, MSIT).</li>
+                <li>Extended Core Team Member, GDGC MSIT 2025-26 – Achieved 100+ Study Jam completions & hosted orientation.</li>
+                <li>900+ WhatsApp Status views (average 250–300).</li>
+                <li>1000+ Instagram Story views; 100+ & 200+ likes on posts.</li>
+                <li>1000+ & 1500+ followers on LinkedIn & Instagram; 100+ likes on LinkedIn post.</li>
+                <li>370+ YouTube subscribers; 1K+ & 2K+ views on Shorts.</li>
+                <li>Started participating in Quiz Competitions & Hackathons; actively building projects (Vibe Coding inspired).</li>
+                <li>Actively participating in extracurricular activities to showcase versatility.</li>
+                <li>Donated small contributions to charity organizations for global sustainability.</li>
+                <li>Participated in Poetry Competition organized by Starlight Film Production (Rajasthan).</li>
+                <li>Attended Agile Conference at MSIT – mindset transformation event.</li>
+                <li>Received GFG Swags at bITsera Tech Community introduction event.</li>
+                <li>Drama Team Member (Teacher's Day Programme) – unITy Club.</li>
+                <li>Developing & regrowing SAMTINK – Cricket News Community with future social mission.</li>
+                <li>1.2 Lakh+ views across Google Maps photos, videos & reviews.</li>
+                <li>Attended DevFest'25 (GDG Kolkata) & ML Kolkata Global Gen AI Hackathon.</li>
+            </ul>
+        </div>
+    </section>
 
-<section id="projects">
-<div class="container">
-<h2 class="section-title scroll-reveal">Featured <span class="gradient-text">Projects</span></h2>
-<div class="projects-grid">
+    <!-- CONTACT -->
+    <section class="scroll-reveal">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:samridha@example.com">samridha@example.com</a></p>
+    </section>
 
-<div class="project-card scroll-reveal">
-<div class="project-title">Handwritten Equation Solver</div>
-<p>AI-powered web application that detects handwritten equations using OCR and solves them using symbolic computation.</p>
-<a href="#" class="btn btn-secondary">GitHub</a>
-</div>
+    <footer>
+        © 2026 Samridha Banerjee | Built with Passion & Consistency
+    </footer>
 
-<div class="project-card scroll-reveal">
-<div class="project-title">Full Stack AI Web App</div>
-<p>Production-ready MERN + AI integrated application with authentication, database, and intelligent processing.</p>
-<a href="#" class="btn btn-secondary">GitHub</a>
-</div>
+    <script>
+        const reveals = document.querySelectorAll('.scroll-reveal');
 
-</div>
-</div>
-</section>
+        function revealOnScroll() {
+            const windowHeight = window.innerHeight;
+            reveals.forEach(el => {
+                const elementTop = el.getBoundingClientRect().top;
+                if (elementTop < windowHeight - 100) {
+                    el.classList.add('active');
+                }
+            });
+        }
 
-<section id="contact">
-<div class="container">
-<h2 class="section-title scroll-reveal">Let's <span class="gradient-text">Connect</span></h2>
-<p style="text-align:center;margin-bottom:2rem;">Open for collaborations and opportunities.</p>
-<div style="text-align:center;">
-<a href="mailto:your.email@example.com" class="btn btn-primary">Send Email</a>
-</div>
-</div>
-</section>
-
-<footer>
-<div class="container">
-<p>© 2026 Samridha Banerjee. All rights reserved.</p>
-</div>
-</footer>
-
-<script>
-const reveals=document.querySelectorAll('.scroll-reveal');
-
-function revealOnScroll(){
-const windowHeight=window.innerHeight;
-reveals.forEach(el=>{
-const elementTop=el.getBoundingClientRect().top;
-if(elementTop<windowHeight-100){
-el.classList.add('active');
-}
-});
-}
-
-window.addEventListener('scroll',revealOnScroll);
-revealOnScroll();
-</script>
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll();
+    </script>
 
 </body>
 </html>
