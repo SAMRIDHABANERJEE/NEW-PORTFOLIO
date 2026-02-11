@@ -156,7 +156,7 @@
 .hero-image img:hover {
     transform: scale(1.05);
 }
-
+        
 /* Responsive */
 @media (max-width: 900px) {
     .hero-container {
@@ -167,6 +167,54 @@
     .hero-text p {
         margin: 20px auto;
     }
+}
+
+/* ===== SKILLS SECTION ===== */
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 2rem;
+}
+
+.section-subtitle {
+    color: #aaaaaa;
+    margin-top: 10px;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #ff0000, #ff4d4d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.skill-tag {
+    background: #1a1a1a;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s ease;
+    border: 1px solid #222;
+}
+
+.skill-tag:hover {
+    background: #222;
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
 }
     </style>
 </head>
@@ -188,31 +236,32 @@
     </div>
 </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="container">
-            <div class="section-header scroll-reveal">
-                <h2 class="section-title">Technical <span class="gradient-text">Arsenal</span></h2>
-                <p class="section-subtitle">Technologies and tools I work with</p>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-tag scroll-reveal">Python</div>
-                <div class="skill-tag scroll-reveal">JavaScript</div>
-                <div class="skill-tag scroll-reveal">TypeScript</div>
-                <div class="skill-tag scroll-reveal">Java</div>
-                <div class="skill-tag scroll-reveal">C Programming</div>
-                <div class="skill-tag scroll-reveal">HTML/CSS</div>
-                <div class="skill-tag scroll-reveal">SQL</div>
-                <div class="skill-tag scroll-reveal">AI/ML</div>
-                <div class="skill-tag scroll-reveal">Prompt Engineering</div>
-                <div class="skill-tag scroll-reveal">Web Development</div>
-                <div class="skill-tag scroll-reveal">Fullstack Development</div>
-                <div class="skill-tag scroll-reveal">Leadership</div>
-                <div class="skill-tag scroll-reveal">Management</div>
-                <div class="skill-tag scroll-reveal">Photography</div>
-            </div>
+    <!-- SKILLS SECTION -->
+<section id="skills" class="scroll-reveal">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Technical <span class="gradient-text">Arsenal</span></h2>
+            <p class="section-subtitle">Technologies and tools I work with</p>
         </div>
-    </section>
+
+        <div class="skills-grid">
+            <div class="skill-tag">Python</div>
+            <div class="skill-tag">JavaScript</div>
+            <div class="skill-tag">TypeScript</div>
+            <div class="skill-tag">Java</div>
+            <div class="skill-tag">C Programming</div>
+            <div class="skill-tag">HTML/CSS</div>
+            <div class="skill-tag">SQL</div>
+            <div class="skill-tag">AI/ML</div>
+            <div class="skill-tag">Prompt Engineering</div>
+            <div class="skill-tag">Web Development</div>
+            <div class="skill-tag">Fullstack Development</div>
+            <div class="skill-tag">Leadership</div>
+            <div class="skill-tag">Management</div>
+            <div class="skill-tag">Photography</div>
+        </div>
+    </div>
+</section>
     
     <!-- ACHIEVEMENTS SECTION -->
     <section id="achievements">
