@@ -354,6 +354,41 @@ nav {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
+
+/* ===== FOOTER ===== */
+
+footer {
+    padding: 30px 0;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(15px);
+    border-top: 1px solid rgba(255,255,255,0.4);
+    margin-top: 60px;
+}
+
+.footer-content p {
+    margin-bottom: 15px;
+    color: var(--text-primary);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #6366f1;
+    transform: translateY(-3px);
+}
         
     </style>
 </head>
@@ -529,8 +564,17 @@ nav {
       
     </section>
 
+     <!-- Footer -->
     <footer>
-        © 2026 Samridha Banerjee | Built with Passion & Consistency
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Samridha Banerjee. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="mailto:banerjeesamridha7@gmail.com">Email</a>
+                    <a href="tel:+918250590487">Phone</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script>
